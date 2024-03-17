@@ -1,0 +1,20 @@
+[package]
+name = "meesign-cli"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+meesign-crypto = { git = "https://github.com/crocs-muni/meesign-crypto.git" }
+tonic = { version = "0.11", features = ["transport", "tls"] }
+tokio = { version = "1.33", features = ["macros", "rt-multi-thread", "time", "fs"] }
+tokio-stream = "0.1.14"
+prost = "0.12"
+hex = "0.4.3"
+openssl = "0.10.64"
+lazy_static = "1.4.0"
+clap = { version = "4.5.3", features = ["derive"] }
+
+[build-dependencies]
+tonic-build = "0.11"
